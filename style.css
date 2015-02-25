@@ -1,0 +1,116 @@
+body {
+  width: 1350px;
+  margin: 0px auto;
+  background-color: white;
+}
+.test {
+  border: solid 1px red;
+}
+header {
+  background-image: url(http://deportes.starmedia.com/imagenes/2015/01/super-bowl-xlix-20152.jpg);
+  text-align: center;
+  background-repeat: no-repeat;
+  background-color: white;
+  background-position: center center;
+  height: 350px;
+  position: relative;
+}
+h1 {
+  font-family: 'Graduate';
+  font-size: 80px;
+  color: #C9C9C9;
+  text-shadow: 3px -2px 3px #000000;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  margin-bottom: -56px;
+  background-color: white;
+  right: 14px;
+  letter-spacing: 0.1em;
+}
+h1 span {
+  text-shadow: -3px -2px 3px #000000;
+}
+#d {
+  text-shadow: 2px -2px 3px #000000;
+}
+p {
+  font-family: 'Graduate', cursive;
+}
+header img {
+  margin: 0px auto;
+}
+.field-border {
+  height: 900px;
+  margin: 0px auto; 
+  position: relative;
+  top: 7px;
+  padding-bottom: 50px;
+}
+.intro {
+  background-color: white;
+  z-index: 50;
+  position: relative;
+  top:  20px;
+  display: inline-block;
+  width: 80%;
+  margin-left: 10%;
+  border-radius: 10px;
+}
+.wrapper {
+  bottom: solid 1px red;
+}
+.intro p {
+  margin: 0px auto;
+  padding: 10px; 
+}
+.football-field {
+  background-image: url(http://i.imgur.com/J66i7Z2.png);
+  width: 100%;
+  height: 100%;
+  margin: 0px auto;
+  background-repeat: no-repeat;
+  position: relative;
+  background-position: center center;
+  border-radius: 15px;
+  top: 50px;
+  box-shadow: 1.5px 1px 2px #000000;
+}
+ul {
+  display: inline-block;
+  list-style-type: none;
+  position: relative;
+  top: 47%;
+  transform: translateY(-50%);
+}
+.defense {
+  float: right;
+  position: relative;
+  right: 30px;
+}
+.receivers {
+  float: right;
+  position: relative;
+  left: 150px;
+  z-index: 5;
+}
+.wilson.player{
+  margin-left: 12em;
+  position: relative;
+  z-index: 10;
+  left: 400px;
+}
+.player {
+  width: 25%
+}
+.player img{
+  border-top-left-radius: 90px 100px;
+  border-top-right-radius: 90px 100px;
+  border-bottom-left-radius: 90px 100px;
+  border-bottom-right-radius: 90px 100px;
+  width: 50%;
+}
+.play-by-play {
+  background-color: white;
+  text-align: center;
+}
