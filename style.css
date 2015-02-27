@@ -3,8 +3,45 @@ body {
   margin: 0px auto;
   background-color: white;
 }
-.test {
-  border: solid 1px red;
+.scoreboard {
+  width: 85%;
+  height: 120px;
+  position: relative;
+  font-family: 'Graduate';
+  float: left;
+  background-color: white;
+  margin-top: 30px;
+  margin-left: 90px;
+  margin-bottom: 0px;
+  text-align: left;
+  box-shadow: 1px -1px 1px #000000;
+  border-radius: 3px;
+  padding-right: 7px;
+  padding-left: 7px;
+  border: solid 1px black;
+}
+figcaption {
+  margin: 0px auto;
+  color: white;
+  background-color: black;
+  font-family: 'Graduate';
+  width: 50%;
+  padding-bottom: 5px;
+  padding-top: 5px;
+  border-radius: 5px;
+}
+
+li {
+  text-align: center;
+  margin: 0px auto;
+  width: 50%;
+  transition: width 0.75s ease;
+  position: relative; 
+}
+li:hover {
+  width: 100%;
+  z-index: 1000;
+  position: :relative;
 }
 header {
   background-image: url(http://deportes.starmedia.com/imagenes/2015/01/super-bowl-xlix-20152.jpg);
@@ -35,7 +72,7 @@ h1 span {
   text-shadow: 2px -2px 3px #000000;
 }
 p {
-  font-family: 'Graduate', cursive;
+  font-family: 'Graduate';
 }
 header img {
   margin: 0px auto;
@@ -46,23 +83,6 @@ header img {
   position: relative;
   top: 7px;
   padding-bottom: 50px;
-}
-.intro {
-  background-color: white;
-  z-index: 50;
-  position: relative;
-  top:  20px;
-  display: inline-block;
-  width: 80%;
-  margin-left: 10%;
-  border-radius: 10px;
-}
-.wrapper {
-  bottom: solid 1px red;
-}
-.intro p {
-  margin: 0px auto;
-  padding: 10px; 
 }
 .football-field {
   background-image: url(http://i.imgur.com/J66i7Z2.png);
@@ -80,37 +100,39 @@ ul {
   display: inline-block;
   list-style-type: none;
   position: relative;
-  top: 47%;
+  top: 42%;
   transform: translateY(-50%);
+  margin-top: -75px;
+}
+.wilson {
+  left: 600px;
+  position: relative;
+  z-index: 1000
 }
 .defense {
   float: right;
   position: relative;
   right: 30px;
+  margin-left: -200px;
 }
 .receivers {
   float: right;
   position: relative;
-  left: 150px;
-  z-index: 5;
-}
-.wilson.player{
-  margin-left: 12em;
-  position: relative;
-  z-index: 10;
-  left: 400px;
-}
-.player {
-  width: 25%
 }
 .player img{
   border-top-left-radius: 90px 100px;
   border-top-right-radius: 90px 100px;
   border-bottom-left-radius: 90px 100px;
   border-bottom-right-radius: 90px 100px;
-  width: 50%;
+  width: 75%;
+  position: relative;
+  transition: border, 0.75s, ease;
+  margin: 5px;
 }
+
 .play-by-play {
   background-color: white;
   text-align: center;
+  position: relative;
+  font-family: 'Graduate';
 }

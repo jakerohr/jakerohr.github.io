@@ -1,6 +1,4 @@
-/* click on qb to start the play. names drop below players on hover. players hide/show on play. show result on scorboard. mini pics that expand on hover.*/
-
-//$(document).ready (function() {
+$(document).ready (function() {
 
   var message, down;
   down = 1;
@@ -40,19 +38,31 @@
   var d2 = new Player("Darelle Revis", 7, 1, 5, 5, 2, 5, "Defense");
   var d3 = new Player("Brandon Browner", 5, 3, 6, 5, 3, 6, "Defense");
   var d4 = new Player("Devin McCourty", 7, 2, 6, 4, 2, 5, "Defense");
-    
-  alert("In the last seconds of Superbowl XLIX, the Seattle Seahawks were poised to score a touchdown and take the lead over the New England Patriots. But quarterback Russell Wilson threw an interception and the Patriots held on to the lead. If only Wilson had one more chance...")
-  $("li img").hover( 
+  
+  $("figcaption").hide();
+  $("li").hover(
     function() {
-      $(this).addClass("test");
-    }, function() {
-      $(this).removeClass("test");
-    }  
-  );
-  $(".football-field").on("click", ".wilson.player", function () {
-    while(down < 5) { 
-    
-      alert("Down " + down + ". Seahawks have the ball on the 1-yard line!");
+    $(this).find("figcaption").slideToggle(1000);
+  }, function() {
+    $(this).find("figcaption").slideToggle(1000);
+  });
+  
+  function transition (message) {
+    $(".scoreboard").animate({
+      opacity: 0
+    }, 00);
+    $(".scoreboard").text(message);
+    $(".scoreboard").animate({
+      opacity: 1
+    }, 1500);
+  };  
+    //page won't load with this while loop.
+  //while (down < 5) {
+    $(".scoreboard").on("click", function() {
+      var passedTo = new Player();
+      var defender = new Player();
+
+      console.log(passedTo.name);
 
       console.log(r1.getOpen(), r1.catchPass());
       console.log(r2.getOpen(), r2.catchPass());
@@ -63,57 +73,65 @@
       console.log(d3.getOpen(), d3.catchPass());
       console.log(d4.getOpen(), d4.catchPass());
 
-      if (r1.open == true) {
-        var passedTo = r1;
-        var defender = d1;
-        var thrown = true;
-      } else if (r2.open == true) {
-        var passedTo = r2;
-        var defender = d2;
-      } else if (r3.open == true) {
-        var passedTo = r3;
-        var defender = d3;
-        var thrown = true;
-      } else if (r4.open == true) {
-        var passedTo = r4;
-        var defender = d4;
-        var thrown = true;
-      } else {
-        alert("Wilson is sacked!");
-        down++;
-        var thrown = false;
-      }
-      if(thrown == true) {
-        alert(qb.name + " passes to " + passedTo.name + ". Gaurded by " + defender.name + ".");
-        console.log(passedTo, defender);
-
-        if (passedTo.caught == true && defender.caught != true) {
-          down = 5;
-          message = "TOUCHDOWN! " + passedTo.name + " makes an incredible catch over " + defender.name + "! Seattle wins!!!";  
-        } else if (passedTo.caught == true && defender.caught == true) {
-          if (passedTo.playMaker <= defender.playMaker) {
-            message = "Incomplete. " + defender.name + " knocked it away.";
-            down++;
+      // this if statement works for the first down but the plays seem to stack on each other for subsequent plays
+      if (down >= 5) {
+       $(".scoreboard").text("The game is over!");
+      } else {  
+        transition("Down " + down + ". Seahawks have the ball on the 1-yard line! Click the Quarterback to hike.");
+        $(".play-by-play").text("Down " + down  ); 
+        
+        $(".wilson").on("click", function() {
+          if (r1.open == true) {
+            passedTo = r1;
+            defender = d1;
+            var thrown = true;
+          } else if (r2.open == true) {
+            passedTo = r2;
+            defender = d2;
+            var thrown = true;
+          } else if (r3.open == true) {
+            passedTo = r3;
+            defender = d3;
+            var thrown = true;
+          } else if (r4.open == true) {
+            passedTo = r4;
+            defender = d4;
+            var thrown = true;
           } else {
-            down = 5;
-            message = "TOUCHDOWN! " + passedTo.name + " makes an incredible catch over " + defender.name + "! Seattle wins!!!";  
+            transition("Wilson is sacked! Click for next down.");
+            down++;
+            var thrown = false;
           }
-        } else if (passedTo.caught != true && defender.caught == true) {
-          down = 5;
-          message = "INTERCEPTION! " + defender.name + " picked it off! The Patriots take over on the one. And just like that it's all over for Seattle."; 
-        } else if (passedTo.caught != true && defender.caught != true) { 
-          message = "Incomplete. " + " Wilson just couldn't find " + passedTo.name + " on that one.";
-          down++;
-        }
-      console.log("down is " + down);
-      alert(message); 
-      } 
-           
-    };
-    if(down == 5) {
-      alert("The game is over!");
-    } 
-   });  
+          if(thrown == true) {
+            transition(qb.name + " passes to " + passedTo.name + ". Gaurded by " + defender.name + ". Click on the receiver.");
+            console.log(passedTo.name, defender.name);
+          }
+
+          $(".receivers").on("click", function() {    
+            if (passedTo.caught == true && defender.caught != true) {
+              down = 5;
+              transition("TOUCHDOWN! " + passedTo.name + " makes an incredible catch over " + defender.name + "! Seattle wins!!!");  
+            } else if (passedTo.caught == true && defender.caught == true) {
+              if (passedTo.playMaker <= defender.playMaker) {
+                transition("Incomplete. " + defender.name + " knocked it away.");
+                down++;
+              } else {
+                down = 5;
+                transition("TOUCHDOWN! " + passedTo.name + " makes an incredible catch over " + defender.name + "! Seattle wins!!!");  
+              }
+            } else if (passedTo.caught != true && defender.caught == true) {
+              down = 5;
+              transition("INTERCEPTION! " + defender.name + " picked it off! The Patriots take over on the one. And just like that it's all over for Seattle."); 
+            } else if (passedTo.caught != true && defender.caught != true) { 
+              transition("Incomplete. " + " Wilson just couldn't find " + passedTo.name + " on that one.");
+              down++;
+            }
+            console.log("down is " + down);
+          });
+        });   
+      }   
+    });
+  // }
+});
   
-//};
 
