@@ -1,0 +1,48 @@
+body {
+  background-image: url(http://www.artwithin.org/wp-content/uploads/2014/01/football-field.jpg);
+  background-repeat: no-repeat;
+  text-align: center;
+}
+.players img {
+  width: 50%;
+}
+li {
+   display: inline-block;
+   width: 25%;
+   margin: 5px;
+}
+button {
+  border-radius: 10px;
+  width: 150px;
+  height: 30px;
+  font-family: helvetica;
+  font-size: 18px;
+  background-color: white;
+  border: solid 2px black;
+}
+h1 {
+  background-color: white;
+  width: 300px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  padding-top: 8px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 10px;
+  font-family: helvetica;
+  border: solid black 2px;
+}
+figcaption {
+  margin: 0px auto;
+  color: black;
+  background-color: white;
+  width: 40%;
+  font-family: helvetica;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 2px;
+  border-radius: 5px;
+  border: solid black 2px;
+}
