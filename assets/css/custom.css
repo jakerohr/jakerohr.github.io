@@ -20,5 +20,7 @@
 .frida {
   margin-top: 50px;
   text-align: center;
-  border-radius: 5px;
+}
+.frida img {
+  border-radius: 25px;
 }
