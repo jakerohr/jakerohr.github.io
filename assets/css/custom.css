@@ -1,0 +1,23 @@
+.grid figure img {
+  position: relative;
+  display: block;
+  max-height: 226px;
+  max-width: 100%;
+  opacity: 0.8;
+}
+
+.iconbox {
+  height: 300px;
+}
+
+.profile-pic {
+  height: 300px;
+  width: 300px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.frida {
+  margin-top: 50px;
+  text-align: center;
+}
