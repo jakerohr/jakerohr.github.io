@@ -1,0 +1,165 @@
+.field-bg {
+  background-image: url(assets/football-field.jpg);
+  background-size: contain;
+  height: 1200px;
+}
+
+#title-box{
+    position: fixed;
+    background-color: white;
+    padding: 0 25px 5px 25px;
+    border-radius: 5px;
+    top: 40px;
+    left: 100px;
+    text-align: center;
+
+}
+
+#menu-box {
+  position: fixed;
+  top: 40px;
+  right: 120px;
+}
+.fa-circle-o {
+  color: #213BB5;
+  font-size: 80px;
+}
+.fa-shield {
+  color: #213BB5;
+  font-size: 75px;
+}
+.fa-child {
+  color: #213BB5;
+  font-size: 80px;
+}
+.fa-user {
+  color: #213BB5;
+  font-size: 70px;
+}
+#qb {
+  top: 580px;
+  left: 558px;
+  position: absolute;
+}
+
+#one {
+  top: 486px;
+  left: 188px;
+  position: absolute;
+}
+#two {
+  top: 486px;
+  left: 360px;
+  position: absolute;
+}
+#three {
+  top: 486px;
+  left: 558px;
+  position: absolute;
+}
+#four {
+  top: 486px;
+  left: 745px;
+  position: absolute;
+
+}
+#five {
+  top: 486px;
+  left: 912px;
+  position: absolute;
+
+}
+#in-n-out #qb.hike {
+  animation-duration: 3s;
+  animation-name: drop-back;
+  animation-fill-mode: forwards;
+}
+#in-n-out #one.hike {
+  animation-duration: 3s;
+  animation-name: cross-up-right;
+  animation-fill-mode: forwards;
+}
+#in-n-out #two.hike {
+  animation-duration: 3s;
+  animation-name: cross-up-left;
+  animation-fill-mode: forwards;
+}
+#in-n-out #three.hike {
+  animation-duration: 3s;
+  animation-name: flat-left;
+  animation-fill-mode: forwards;
+}
+#in-n-out #four.hike {
+  animation-duration: 3s;
+  animation-name: in-n-out;
+  animation-fill-mode: forwards;
+}
+#in-n-out #five.hike{
+  animation-duration: 1.8s;
+  animation-name: block-left;
+  animation-fill-mode: forwards;
+}
+@keyframes in-n-out {
+  30% {
+    transform: translate(-100px, -80px);
+  }
+  to {
+    transform: translate(250px, -200px);
+  }
+}
+@keyframes block-left {
+  to {
+    transform: translate(-200px, -200px);
+    /*visibility: hidden;*/
+  }
+}
+@keyframes drop-back {
+  25% {
+
+    transform: translate(-20px, -15px);
+  }
+  50% {
+
+    transform: translate(15px, 15px);
+  }
+  75% {
+
+    transform: translate(-10px, 8px);
+  }
+  to {
+
+    transform: translate(-15px, -10px);
+  }
+}
+@keyframes cross-up-left {
+  35% {
+    transform: translate(0px, -100px);
+  }
+  60% {
+    transform: translate(-200px, -180px);
+  }
+  to {
+    transform: translate(-200px, -400px);
+  }
+
+}
+@keyframes cross-up-right {
+  30% {
+    transform: translate(0px, -150px);
+  }
+  50% {
+    transform: translate(200px, -200px);
+  }
+  to {
+    transform: translate(200px, -400px);
+  }
+}
+@keyframes flat-left {
+  60% {
+    transform: translate(-500px, 0px);
+  }
+  to {
+    transform: translate(-500px, -90px);
+  }
+}
+
