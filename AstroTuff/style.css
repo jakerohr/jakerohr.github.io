@@ -1,73 +1,81 @@
 .field-bg {
   background-image: url(assets/football-field.jpg);
   background-size: contain;
-  height: 1200px;
+  height: 1000px;
 }
 
-#title-box{
-    position: fixed;
-    background-color: white;
-    padding: 0 25px 5px 25px;
-    border-radius: 5px;
-    top: 40px;
-    left: 100px;
-    text-align: center;
-
+.collapse .btn {
+  margin-right: 10px;
 }
-
-#menu-box {
-  position: fixed;
-  top: 40px;
-  right: 120px;
+#ball {
+  font-size: 3vw;
+}
+.players i {
+  position: relative;
 }
 .fa-circle-o {
   color: #213BB5;
-  font-size: 80px;
+  font-size: 6vw;
 }
 .fa-shield {
   color: #213BB5;
-  font-size: 75px;
+  font-size: 5.5vw;
 }
 .fa-child {
   color: #213BB5;
-  font-size: 80px;
+  font-size: 6vw;
 }
 .fa-user {
   color: #213BB5;
-  font-size: 70px;
+  font-size: 5vw;
 }
 #qb {
-  top: 580px;
-  left: 558px;
-  position: absolute;
+  top: 57%;
+  left: 20%;
 }
-
 #one {
-  top: 486px;
-  left: 188px;
-  position: absolute;
+  top: 48%;
+  left: -27%;
 }
 #two {
-  top: 486px;
-  left: 360px;
-  position: absolute;
+  top: 48%;
+  left: -15%;
 }
 #three {
-  top: 486px;
-  left: 558px;
-  position: absolute;
+  top: 48%;
+  left: 0;
 }
 #four {
-  top: 486px;
-  left: 745px;
-  position: absolute;
-
+  top: 48%;
+  left: 10%;
 }
 #five {
-  top: 486px;
-  left: 912px;
-  position: absolute;
-
+  top: 48%;
+  left: 20%;
+}
+#cross-under #qb {
+  top: 57%;
+  left: 20%;
+}
+#cross-under #one {
+  top: 48%;
+  left: -27%;
+}
+#cross-under #two {
+  top: 48%;
+  left: -20%;
+}
+#cross-under #three {
+  top: 48%;
+  left: -13%;
+}
+#cross-under #four {
+  top: 48%;
+  left: -5%;
+}
+#cross-under #five {
+  top: 48%;
+  left: 7%;
 }
 #in-n-out #qb.hike {
   animation-duration: 3s;
@@ -99,67 +107,224 @@
   animation-name: block-left;
   animation-fill-mode: forwards;
 }
+#in-n-out .hike #ball{
+  animation-duration: 1.8s;
+  animation-delay: 2s;
+  animation-name: in-n-out-ball;
+  animation-fill-mode: forwards;
+}
+@keyframes in-n-out-ball{
+
+  0% { top: 0; }
+  50% { top: 30px; left: 20px; }
+  50% { top: 10px; }
+  100% { top: 0; }
+
+}
 @keyframes in-n-out {
   30% {
-    transform: translate(-100px, -80px);
+    transform: translate(-185%, -140%);
   }
   to {
-    transform: translate(250px, -200px);
+    transform: translate(370%, -300%);
   }
 }
 @keyframes block-left {
   to {
-    transform: translate(-200px, -200px);
-    /*visibility: hidden;*/
+    transform: translate(-350%, -350%);
   }
 }
 @keyframes drop-back {
   25% {
 
-    transform: translate(-20px, -15px);
+    transform: translate(-20%, -15%);
   }
   50% {
 
-    transform: translate(15px, 15px);
+    transform: translate(15%, 15%);
   }
   75% {
 
-    transform: translate(-10px, 8px);
+    transform: translate(-10%, 8%);
   }
   to {
 
-    transform: translate(-15px, -10px);
+    transform: translate(-15%, -10%);
   }
 }
 @keyframes cross-up-left {
   35% {
-    transform: translate(0px, -100px);
+    transform: translate(0%, -250%);
   }
   60% {
-    transform: translate(-200px, -180px);
+    transform: translate(-350%, -350%);
   }
   to {
-    transform: translate(-200px, -400px);
+    transform: translate(-350%, -575%);
   }
 
 }
 @keyframes cross-up-right {
   30% {
-    transform: translate(0px, -150px);
+    transform: translate(0%, -300%);
   }
   50% {
-    transform: translate(200px, -200px);
+    transform: translate(350%, -400%);
   }
   to {
-    transform: translate(200px, -400px);
+    transform: translate(350%, -575%);
   }
 }
 @keyframes flat-left {
   60% {
-    transform: translate(-500px, 0px);
+    transform: translate(-900%, 0%);
   }
   to {
-    transform: translate(-500px, -90px);
+    transform: translate(-900%, -190%);
   }
 }
 
+#stop-and-go #qb.hike {
+  animation-duration: 3s;
+  animation-name: drop-back;
+  animation-fill-mode: forwards;
+}
+#stop-and-go #one.hike {
+  animation-duration: 2.5s;
+  animation-name: stop-go-left;
+  animation-fill-mode: forwards;
+}
+#stop-and-go #two.hike {
+  animation-duration: 3s;
+  animation-name: five-in-left;
+  animation-fill-mode: forwards;
+}
+#stop-and-go #three.hike {
+  animation-duration: 2s;
+  animation-name: button-hook;
+  animation-fill-mode: forwards;
+}
+#stop-and-go #four.hike {
+  animation-duration: 3s;
+  animation-name: five-in-right;
+  animation-fill-mode: forwards;
+}
+#stop-and-go #five.hike{
+  animation-duration: 2.5s;
+  animation-name: stop-go-right;
+  animation-fill-mode: forwards;
+}
+#stop-and-go .hike #ball{
+  animation-duration: 2.5s;
+  animation-delay: 2s;
+  animation-name: stop-go-right;
+  animation-fill-mode: forwards;
+}
+@keyframes stop-go-left {
+  35% {
+    transform: translate(0%, -300%);
+  }
+  55% {
+    transform: translate(50%, -250%);
+  }
+  to {
+    transform: translate(50%, -550%);
+  }
+}
+@keyframes stop-go-right {
+  35% {
+    transform: translate(0%, -300%);
+  }
+  55% {
+    transform: translate(-50%, -250%);
+  }
+  to {
+    transform: translate(-50%, -550%);
+  }
+}
+@keyframes five-in-left {
+  35% {
+    transform: translate(0%, -150%);
+  }
+  to {
+    transform: translate(1000%, -150%);
+  }
+}
+@keyframes five-in-right {
+  35% {
+    transform: translate(0%, -150%);
+  }
+  to {
+    transform: translate(-1000%, -150%);
+  }
+}
+@keyframes button-hook {
+  70% {
+    transform: translate(0%, -400%);
+  }
+  to {
+    transform: translate(-20%, -350%);
+  }
+}
+
+#cross-under #qb.hike {
+  animation-duration: 3s;
+  animation-name: drop-back;
+  animation-fill-mode: forwards;
+}
+#cross-under #one.hike {
+  animation-duration: 3s;
+  animation-name: block-right-one;
+  animation-fill-mode: forwards;
+}
+#cross-under #two.hike {
+  animation-duration: 3s;
+  animation-name: block-right-two;
+  animation-fill-mode: forwards;
+}
+#cross-under #three.hike {
+  animation-duration: 3s;
+  animation-name: block-right-three;
+  animation-fill-mode: forwards;
+}
+#cross-under #four.hike {
+  animation-duration: 3s;
+  animation-name: block-right-four;
+  animation-fill-mode: forwards;
+}
+#cross-under #five.hike{
+  animation-duration: 3s;
+  animation-name: under-left;
+  animation-fill-mode: forwards;
+}
+#cross-under .hike #ball{
+  animation-duration: 1.8s;
+  animation-delay: 2s;
+  animation-name: block-right-one in-n-out-ball;
+  animation-fill-mode: forwards;
+}
+@keyframes block-right-one {
+  to {
+    transform: translate(700%, -500%);
+  }
+}
+@keyframes block-right-two {
+  to {
+    transform: translate(500%, -400%);
+  }
+}
+@keyframes block-right-three {
+  to {
+    transform: translate(400%, -300%);
+  }
+}
+@keyframes block-right-four {
+  to {
+    transform: translate(300%, -200%);
+  }
+}
+@keyframes under-left {
+  to {
+    transform: translate(-700%, -100%);
+  }
+}

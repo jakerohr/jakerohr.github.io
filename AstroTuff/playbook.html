@@ -7,20 +7,50 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha256-3dkvEK0WLHRJ7/Csr0BZjAWxERc5WH7bdeUya2aXxdU= sha512-+L4yy6FRcDGbXJ9mPG8MT/3UCDzwR9gPeyFNMCtInsol++5m3bk2bXWKdZjvybmohrAsn3Ua5x8gfLnbE1YkOg==" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
   </head>
-  <body>`
-    <div class="container">
-      <div class="row">
 
-        <!--  <div class="col-xs-12 text-center">
-        <h1>AstroTuff Playbook</h1>
-        </div> -->
-        <div id="pre-snap" class="col-xs-12 text-center field-bg">
+  <body>
 
-          <div id="menu-box">
-            <div id="title-box">
-              <h1 id="title">AstroTuff Playbook</h1>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <h1 id="title" class="navbar-text">AstroTuff Playbook</h1>
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right btn-group">
+
+        <button type="button" id="play-picker" class="btn btn-default btn-lg dropdown-toggle navbar-btn" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Pick a Play <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu">
+          <li id="play-one"><a href="#">In-N-Out</a></li>
+          <li id="play-two"><a href="#">Stop and Go</a></li>
+          <li id="play-three"><a href="#">Cross Under</a></li>
+          <!-- <li id="play-four"><a href="#">QB Run</a></li> -->
+        </ul>
+
+      </ul>
+      <div class="btn-group navbar-right">
+          <button id="go-btn" class="btn btn-danger btn-lg navbar-btn">Hike!</button>
+      </div>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+    <!-- <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container">
+              <div id="menu-box">
+            <div class="btn-group btn-default" id="title-box">
+              <h1 type="button" class="btn" id="title">AstroTuff Playbook</h1>
             </div>
-            <div class="btn-group">
+            <div class="btn-group navbar-right">
               <button type="button" class="btn btn-default btn-lg dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Pick a Play <span class="caret"></span>
               </button>
@@ -31,11 +61,16 @@
                 <li id="play-four"><a href="#">QB Run</a></li>
               </ul>
             </div>
-            <button id="go-btn" class="btn btn-danger btn-lg">Hike!</button>
+  </div>
+</nav> -->
+    <div class="container">
+      <div class="row">
 
-          </div>
-
-          <i id="qb" class="fa fa-circle-o"></i>
+        <!--  <div class="col-xs-12 text-center">
+        <h1>AstroTuff Playbook</h1>
+        </div> -->
+        <div id="pre-snap" class="players pre-snap col-xs-12 text-center field-bg">
+          <i id="qb" class="fa fa-circle-o"><span id="ball">&#127944;</span></i>
           <i id="one" class="fa fa-circle-o"></i>
           <i id="two" class="fa fa-circle-o"></i>
           <i id="three" class="fa fa-circle-o"></i>
@@ -44,6 +79,7 @@
 
         </div>
       </div>
+    </div>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha256-KXn5puMvxCw+dAYznun+drMdG1IFl3agK0p/pqT9KAo= sha512-2e8qq0ETcfWRI4HJBzQiA3UoyFk6tbNyG+qSaIBZLyW9Xf3sWZHN/lxe9fTh1U45DpPf07yj94KsUHHWe4Yk1A==" crossorigin="anonymous"></script>
     <script type="text/javascript" src="script.js"></script>
