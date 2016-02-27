@@ -1,38 +1,54 @@
 <!doctype html>
   <head>
-    <title>Superbowl Sort</title>
+    <title>Superbowl Redux</title>
     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <link href='http://fonts.googleapis.com/css?family=Graduate' rel='stylesheet' type='text/css'>
   </head>
   <body>
     <header>
-      <h1>Superbowl Players</h1>
-      <button class="speed">Sort by Speed</button>
+      <h1>Re<span id="d">d</span><span>ux</span></h1>
     </header>
-    <section class="players">
-      <ul>
-        <li data-speed= "8" id="qb"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14881.png&w=350&h=254"/>
-          <figcaption>Russell Wilson</figcaption>
-        <li data-speed= "7" id="d4"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/13236.png&w=350&h=254"/>
-          <figcaption>Devin McCourty</figcaption></li>
-        <li data-speed= "5" id="d3"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/9250.png&w=350&h=254"/>
-          <figcaption>Brandon Browner</figcaption></li>
-        <li data-speed= "3" id="d2"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/10458.png&w=350&h=254"/>
-          <figcaption>Darelle Revis</figcaption></li>
-        <li data-speed= "7" id="d1"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/17435.png&w=350&h=254"/>
-          <figcaption>Malcom Butler</figcaption></li>
-        <li data-speed= "9" id="r4"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14285.png&w=350&h=254"/>
-          <figcaption>Chris Matthews</figcaption></li>
-        <li data-speed= "6" id="r3"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14221.png&w=350&h=254"/>
-          <figcaption>Doug Baldwin</figcaption></li>
-        <li data-speed= "4" id="r2"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15428.png&w=350&h=254"/>
-          <figcaption>Jermaine Kearse</figcaption></li>
-        <li data-speed= "5" id="r1"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14280.png&w=350&h=254"/>
-          <figcaption>Ricardo Lockette</figcaption>
-        </li>
-      </ul>
+      <div class="field-border">
+        <section class="football-field">
+          <section class="scoreboard">
+          <p>In the last seconds of Superbowl XLIX, the Seattle Seahawks were poised to score a touchdown and take the lead over the New England Patriots. But quarterback Russell Wilson threw an interception and the Patriots held on to the lead. If only Wilson had one more chance...</p>
+          <p><span>Click here to start</span></p>
+        </section>
+          <ul class="wilson player">
+            <li data-speed= "8"id="qb"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14881.png&w=350&h=254"/>
+              <figcaption>Russell Wilson</figcaption>
+            </li>
+          </ul>
+          <ul class="defense player">
+            <li data-speed= "7"id="d4"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/13236.png&w=350&h=254"/>
+              <figcaption>Devin McCourty</figcaption></li>
+            <li data-speed= "5"id="d3"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/9250.png&w=350&h=254"/>
+              <figcaption>Brandon Browner</figcaption></li>
+            <li data-speed= "3"id="d2"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/10458.png&w=350&h=254"/>
+              <figcaption>Darelle Revis</figcaption></li>
+            <li data-speed= "7"id="d1"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/17435.png&w=350&h=254"/>
+              <figcaption>Malcom Butler</figcaption></li>
+          </ul>
+          <ul class="receivers player">
+            <li data-speed= "9"id="r4"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14285.png&w=350&h=254"/>
+              <figcaption>Chris Matthews</figcaption></li>
+            <li data-speed= "6"id="r3"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14221.png&w=350&h=254"/>
+              <figcaption>Doug Baldwin</figcaption></li>
+            <li data-speed= "4"id="r2"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/15428.png&w=350&h=254"/>
+              <figcaption>Jermaine Kearse</figcaption></li>
+            <li data-speed= "5"id="r1"><img src="http://a.espncdn.com/combiner/i?img=/i/headshots/nfl/players/full/14280.png&w=350&h=254"/>
+              <figcaption>Ricardo Lockette</figcaption>
+            </li>
+          </ul>
+        </section>
+      </div>
+    <section class="play-by-play">
+      <p>Click on the quarterback to hike</p>
     </section>
-  <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
-  <script type="text/javascript" src="sortplay.js"></script>
-</body>
+    <script type="text/javascript" src="jquery-1.11.2.min.js"></script>
+    <script src="runplay.js" type="text/javascript"></script>
 
+  </body>
 </html>
+
+
