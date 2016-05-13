@@ -17,7 +17,6 @@ Game.Repository.prototype.define = function(name, template, options) {
     }
 };
 
-
 // Create an object based on a template.
 Game.Repository.prototype.create = function(name, extraProperties) {
     if (!this._templates[name]) {
